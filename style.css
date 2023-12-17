@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  background: #F0E68C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+img {
+  height: 70px;
+  width: 70px;
+}
+
+img[src="icons/github.svg"] {
+  height: 30px;
+  width: 30px;
+}
+
+main {
+  background: #B6D0E2;
+  width: 80%;
+  height: 80%;
+}
+
+footer {
+  background: #6F8FAF;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding:10px 0;
+}
