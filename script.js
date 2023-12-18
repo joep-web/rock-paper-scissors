@@ -30,7 +30,7 @@ humanChoice.addEventListener("click", (e) => {
 
 btn.addEventListener("click", () => {
   if(choicesArr.length === 0) {
-    // show pop up msg that says select an option
+    chooseOptionWarning();
   } else {
     createBarrier();
   }
@@ -40,8 +40,19 @@ btn.addEventListener("click", () => {
 
 //           FUNCTIONS
 
+const chooseOptionWarning = () => {
+  const warning = document.createElement("div");
+  const txt = document.createElement("p");
+  
+  txt.innerText = "Please choose an option first!";
+  warning.className = "warning";
+  document.body.appendChild(warning);
+  warning.appendChild(txt);
+  barrierAnimations(warning);
+};
+
 const createBarrier = () => {
-    const barrier = document.createElement("div");
+  const barrier = document.createElement("div");
   barrier.style.transition = "all .3s";
   barrier.style.position = "absolute";
   barrier.style.width = "100%";
@@ -49,22 +60,21 @@ const createBarrier = () => {
   barrier.style.left = "0";
   barrier.style.transform = "translateY(-100%)";
   barrier.style.background = "#34495E";
+  CompChoice.appendChild(barrier);
   barrierAnimations(barrier);
 };
 
 const barrierAnimations = (b) => {
   setTimeout(() => {
-    b.style.transform = "translateY(-12%)";
+    b.style.transform = "translateY(-13%)";
   });
-  
-  CompChoice.append(b);
 
   setTimeout(() => {
     b.style.transform = "translateY(-100%)";
   }, 1500);
   
   setTimeout(() => {
-    CompChoice.removeChild(b);
+    b.parentElement.removeChild(b);
     choicesArr.length = 0;
     for(let c of humanChoice.children) {
       c.style.opacity = "0.7";
@@ -84,14 +94,12 @@ const getComputerChoice = () => {
     console.log("Scissors");
   }
 };
+
 getComputerChoice();
 
 
 /*
 
-dapat may mapili muna yung player sa 3 choices pag wala hindi masstart game and may lalabas sa taas? na please select one
-
-pag pinindot yung choice magiging opacity 1 tapos mag sscale using event listener then may lalabas na before/after na mag tatakip sa choice ng computer. ✓✓✓✓
 
 when the shoot is clicked matatawag yung function na mag rarandom sa choice ng computer tas ioopacity 1 then scale ang choice tapos tsaka mawawala yung takip
 
