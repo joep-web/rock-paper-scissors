@@ -32,7 +32,8 @@ img {
   height: 65px;
   width: 65px;
   opacity: 0.7;
-  transition: opacity .5s ease;
+  transition: opacity .5s ease,
+    scale .5s ease;
 }
 
 img[src="icons/github.svg"] {
@@ -70,6 +71,9 @@ main > div {
   border: solid 2px var(--border);
   border-radius: 5px;
   padding: 10px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
 }
 
 .vs {
