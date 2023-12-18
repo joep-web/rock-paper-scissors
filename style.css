@@ -1,48 +1,125 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&display=swap');
+
+
+:root {
+  --border: gray;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-  width: 100%;
-}
-
 body {
-  width: 100%;
-  height: 100dvh;
-  background: #F0E68C;
+  min-height: 100vh;
+  background: #E35335;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  justify-content: center;
+  font-size: 19px;
+  font-family: "Rubik Scribble";
+  font-weight: 900;
+}
+
+h3 {
+  margin: 13px;
+  font-family: "Rubik Doodle Shadow";
 }
 
 img {
-  height: 70px;
-  width: 70px;
+  height: 65px;
+  width: 65px;
+  opacity: 0.7;
+  transition: opacity .5s ease;
 }
 
 img[src="icons/github.svg"] {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
 }
 
 main {
   background: #B6D0E2;
   width: 80%;
-  height: 80%;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
+main div p {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6px;
+}
+
+main > div {
+  width: 80%;
+}
+
+.Human div, .Computer div {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  border: solid 2px var(--border);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.vs {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 15px 0 2px;
+}
+
+button {
+  border: solid 2px var(--border);
+  border-radius: 5px;
+  padding: 6px;
+  background: #708090;
+  margin: 10px 3px 0;
+  font-size: 19px;
+  font-family: "Rubik Scribble";
+  font-weight: 900;
+  color: white;
+}
+
+
 footer {
-  background: #6F8FAF;
+  background: #708090;
   width: 100%;
   position: fixed;
   bottom: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding:10px 0;
+  font-family: 'Dhurjati', sans-serif;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: normal;
+}
+
+footer a {
+  display: grid;
+  place-items: center;
+}
+
+footer img {
+  margin-left: 5px;
+  opacity: 1;
+}
+
+@media screen and (min-width: 800px) and (orientation: landscape) {
+  footer {
+    position: relative;
+    margin-top: 5%;
+  }
 }
