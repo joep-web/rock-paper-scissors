@@ -185,27 +185,4 @@ const WinnerBorder = (w, l) => {
   w.style.transition = "all .3s";
   l.style.borderColor = "#800000";
   l.style.transition = "all .3s";
-}
-
-
-
-  
-/*
-
-dapat may mapili muna yung player sa 3 choices pag wala hindi masstart game and may lalabas sa taas? na please select one ✓✓✓✓
-
-pag pinindot yung choice magiging opacity 1 tapos mag sscale using event listener then may lalabas na before/after na mag tatakip sa choice ng computer. ✓✓✓✓
-
-when the shoot is clicked matatawag yung function na mag rarandom sa choice ng computer tas ioopacity 1 then scale ang choice tapos tsaka mawawala yung takip
-
-
-pag same choices tie
-
-rock beats scissors
-
-paper beats rock
-
-scissors beat paper
-
-*/
-
+};
