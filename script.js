@@ -41,7 +41,6 @@ humanChoice.addEventListener("click", (e) => {
     scaleChoices(choice);
     choicesArr.push(choice.id);
     CompChoice.style.borderColor = humanChoice.style.borderColor = "gray";
-    roundsText.innerText = `Rounds: ${rounds+=1}`;
       
     for(let img of humanChoice.children) {
       if(img.id !== choice.id) {
@@ -62,7 +61,10 @@ btn.addEventListener("click", () => {
   
   if(choicesArr.length === 0) {
     chooseOptionWarning();
+  } else {
+    roundsText.innerText = `Rounds: ${rounds+=1}`;
   }
+  
   if(barrier === true) {
     barrierAnimationOut(CompChoice.querySelector("div"));
     getComputerChoice();
